@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,body {
+  font-family: 'Roboto', sans-serif;
+}
+h1 {
+  font-size: 28px;
+}
+header {
+  position: fixed;
+  width: 100%;
+  background-color: #0C0C0C;
+  padding: 10px;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+nav a {
+  font-size: 16px;
+  text-decoration: none;
+}
+nav ul a {
+  color: #ffffff;
+  font-weight: 500;
+}
+nav ul a:hover {
+  border-bottom: 2px solid #ffffff;
+}
+nav .ham-menu-content{
+  display: none;
+}
+nav h3{
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  margin-right: 8px;
+}
+#ham-menu {
+  display: none;
+}
+
+nav ul.active {
+  top: 0px;
+  right: 0px;
+  position: absolute;
+  display: block;
+}
+/* section */
+#home{
+  display: grid;
+  grid-template-columns: 300px 1fr;
+}
+.sidebar{
+  background-color: #9398BF;
+  padding: 80px;
+  height: 100vh;
+}
+.content{
+  padding: 80px;
+}
+.sidebar ul.activeSidebar{
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 50vw;
+}
+@media only screen and (max-width: 991px) {
+  header {
+    padding: 18px;
+  }
+  
+}
+@media only screen and (max-width: 767px) {
+  nav .ham-menu-content{
+    display: flex;
+    justify-content: space-between;
+  }
+  nav .ham-menu{
+    display: flex;
+  }
+  nav{
+    display: flex;
+    justify-content: start;
+  }
+  #ham-menu {
+    display: block;
+    color: #ffffff;
+  }
+  nav ul {
+    background-color: black;
+    position: fixed;
+    right: 100vw;
+    top: 0px;
+    width: 50vw;
+    height: calc(100vh - 0px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: 1s;
+    gap: 0;
+  }
+  #side-menu{
+    position: absolute;
+    right: 25px;
+    color: #fff;
+  }
+  .sidebar{
+    display: none;
+  }
+}
+@media only screen and (max-width: 575px) and(min-width: 360px) {
+  header {
+    padding: 2rem 3rem;
+  }
+  nav ul {
+    top: 0px;
+    height: calc(100vh - 0px);
+  }
+}
