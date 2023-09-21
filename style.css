@@ -55,7 +55,7 @@ nav ul.active {
   top: 0px;
   right: 0px;
   position: absolute;
-  display: block;
+  display: flex;
 }
 /* section */
 #home{
